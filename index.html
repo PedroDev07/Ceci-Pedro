@@ -14,13 +14,43 @@
         }
 
         body {
-            /* Cor de fundo semelhante à da imagem (um verde/azulado escuro) */
-            background-color: #a47764; 
+            /* 1. CONFIGURAÇÕES DA FOTO DE FUNDO */
+            /* Substitua 'sua_foto_fundo.jpg' pelo nome ou link da sua foto real */
+            background-image: url('fileback.jpeg'); 
+            
+            /* Garante que a foto cubra toda a área, sem distorcer */
+            background-size: cover; 
+            
+            /* Centraliza a foto */
+            background-position: center; 
+            
+            /* Impede que a foto se repita como um mosaico */
+            background-repeat: no-repeat; 
+            
+            /* Fixa a foto no fundo para um efeito visual elegante ao rolar */
+            background-attachment: fixed; 
+
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             display: flex;
             justify-content: center;
             min-height: 100vh;
-            color: white;
+            color: white; /* Cor do texto do nome e ícones sociais */
+            
+            /* Necessário para o overlay funcionar */
+            position: relative; 
+        }
+
+        /* 2. CAMADA DE SOBREPOSIÇÃO (OVERLAY) - CRUCIAL PARA LEITURA */
+        /* Isso coloca uma camada escura sutil sobre a foto para destacar o texto */
+        body::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4); /* Preto com 40% de opacidade. Aumente o 0.4 se precisar de mais contraste. */
+            z-index: 1; /* Coloca a camada atrás do conteúdo */
         }
 
         /* Container principal que imita a tela do celular */
@@ -32,12 +62,16 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
+            
+            /* Garante que o conteúdo fique acima do overlay */
+            position: relative;
+            z-index: 2; 
         }
 
         /* Seção do Perfil */
         .profile-pic {
-            width: 100px;
-            height: 100px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
             object-fit: cover;
             margin-bottom: 1rem;
@@ -46,7 +80,7 @@
 
         .profile-name {
             font-size: 1.2rem;
-            font-weight: 500;
+            font-weight: 800;
             margin-bottom: 2rem;
         }
 
@@ -73,7 +107,7 @@
 
         .link-btn:hover {
             transform: scale(1.02);
-            background-color: #f8f9fa;
+            background-color: #ddd23d;
         }
 
         /* Caixinha do Ícone dentro do botão */
