@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossos Links</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* Cor de fundo semelhante à da imagem (um verde/azulado escuro) */
+            background-color: #a47764; 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            color: white;
+        }
+
+        /* Container principal que imita a tela do celular */
+        .linktree-container {
+            width: 100%;
+            max-width: 480px; /* Largura máxima para manter formato mobile no PC */
+            padding: 3rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Seção do Perfil */
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1rem;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .profile-name {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 2rem;
+        }
+
+        /* Seção dos Botões (Links) */
+        .links-wrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem; /* Espaço entre os botões */
+            margin-bottom: 3rem;
+        }
+
+        .link-btn {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            color: #000;
+            text-decoration: none;
+            padding: 12px 16px;
+            border-radius: 8px;
+            transition: transform 0.2s, background-color 0.2s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .link-btn:hover {
+            transform: scale(1.02);
+            background-color: #f8f9fa;
+        }
+
+        /* Caixinha do Ícone dentro do botão */
+        .icon-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border: 1.5px solid #d1d5db;
+            border-radius: 6px;
+            margin-right: 15px;
+            color: #6b7280;
+            font-size: 1.2rem;
+        }
+
+        /* Texto do botão (usando uma fonte serifada para imitar a imagem) */
+        .link-text {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-weight: bold;
+            font-size: 1.05rem;
+            letter-spacing: 0.5px;
+        }
+
+        /* Redes Sociais no rodapé */
+        .social-icons {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 1.8rem;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+
+        .social-icons a:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="linktree-container">
+        <img src="file.jpeg" alt="Nossa Foto" class="profile-pic">
+        
+        <h1 class="profile-name">Cecilia Rodrigues & Pedro Lucas Correia</h1>
+
+        <div class="links-wrapper">
+            <a href="https://www.amazon.com.br/hz/wishlist/ls/1QQ85NWIJ3UZO?ref_=wl_share" class="link-btn">
+                <div class="icon-box"><i class="fa-solid fa-gift"></i></div>
+                <span class="link-text">link de presente amazon</span>
+            </a>
+
+            <a href="https://lista.havan.com.br/Convidado/ItensListaPresente/835760" class="link-btn">
+                <div class="icon-box"><i class="fa-solid fa-list-check"></i></div>
+                <span class="link-text">link de presente havan</span>
+            </a>
+
+            <a href="https://noivos.casar.com/cecilia-e-pedro-2026-08-08#/one-page/_start" class="link-btn">
+                <div class="icon-box"><i class="fa-solid fa-user-check"></i></div>
+                <span class="link-text">confirme sua presença</span>
+            </a>
+
+            <a href="#" class="link-btn">
+                <div class="icon-box"><i class="fa-solid fa-globe"></i></div>
+                <span class="link-text">visite o nosso site</span>
+            </a>
+        </div>
+
+    </div>
+
+</body>
+</html>
